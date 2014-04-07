@@ -1,0 +1,8 @@
+#!/usr/bin/env ruby
+
+require 'rbtap/InterceptViewer'
+
+#pass '-h' to see options
+options = RBTap::InterceptViewer::parse(ARGV)
+iv = RBTap::InterceptViewer.new(options)
+iv.run
