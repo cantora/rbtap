@@ -177,3 +177,11 @@ intercept: 1
     00000050  00 12 75 00 00 00 0e 10                          |..u.....|
 
 ```
+
+##status
+currently rbtap has a nasty bug having to do with activerecord: after 5
+interceptions are captured activerecord seems to run out of database
+connections from the connection pool. i think this has something to do
+with different threads "checking out" the connections without
+returning them...
+
